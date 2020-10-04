@@ -1,7 +1,11 @@
+print("Make a eye for this robot")
+eye = input()
+
+
 print("         O")
 print("         |")
 print("     #########")
-print("     # 0   0 #")
+print("     #", eye," ", eye, "#")
 print("     #  ___  #")
 print("     #########")
 print(" ##################")
