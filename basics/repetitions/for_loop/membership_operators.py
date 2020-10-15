@@ -7,4 +7,4 @@ reversed = ""
 for letter in phrase:
     reversed = letter + reversed
 
-print(reversed) 
+print(reversed)
