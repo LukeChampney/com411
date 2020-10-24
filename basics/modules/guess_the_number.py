@@ -1,100 +1,43 @@
-def play_guess_the_number():
-  import random
-  print("Please enter the minimum value:")
-  min = int(input())
+#define a function
+def run():
+
+  #define a function
+  def play_guess_the_number():
+    import random
+    print("Please enter the minimum value:")
+    min = int(input())
   
-  print("Please enter the maximum value:")
-  max = int(input())
-  
-  randomnumber = random.randrange(min, max)
-  
-  print("I am thinking of a number between {} and {}.".format(min, max))
-  print("Can you guess what it is?")
-  
-  guess = 0
-  
-  while(guess != randomnumber):
-    print("Please enter a number:")
-    guess = int(input())
+    print("Please enter the maximum value:")
+    max = int(input())
     
-    if (guess == randomnumber):
-      print("Congratulations!")
-      break
-      
-    elif (guess < randomnumber):
-      print("Guess higher")
-      
-    else:
-      print("Guess lower")
+    #choose a number between chosen range 
+    randomnumber = random.randrange(min, max)
   
-  print("Game over!")
-
-
-play_guess_the_number()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import random
-
-print("Please enter the minimum value:")
-min_value = int(input())
-
-print("Please enter the maximum value:")
-max_value = int(input())
-
-random_number = random.randrange(min_value, max_value)
-
-print("I am thinking of a number between {} and {}.".format(min_value, max_value))
-print("Can you guess what it is?")
-
-guess = 0
-
-while(guess != random_number):
-  print("Please enter a number:")
-  guess = int(input())
-
-  if (guess == random_number):
-    print("Congratulations!")
-    break
-  elif (guess < random_number):
-    print("Guess higher")
-  else:
-    print("Guess lower")
+    print("I am thinking of a number between {} and {}.".format(min, max))
+    print("Can you guess what it is?")
   
-print("Game over!")
+    guess = 0
+
+    #runs this loop forever until guess == randomnumber
+    while(guess != randomnumber):
+      print("Please enter a number:")
+      guess = int(input())
+    
+      if (guess == randomnumber):
+        print("Congratulations!")
+        #breaks the loop when number match
+        break
+      
+      #if guess is lower than randomnumber then print the following message and starts the loop again
+      elif (guess < randomnumber):
+        print("Guess higher")
+      
+      #if guess is higher than randomnumber then print the following message and starts the loop again
+      else:
+        print("Guess lower")
+  
+    #once the user guessed the number print the followimg message
+    print("Game over!")
+
+  #calls a function
+  play_guess_the_number()

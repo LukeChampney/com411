@@ -1,14 +1,19 @@
-print("How many numbers should I sum up?")
-amount = int(input())
+#define a function
+def run():
 
-number = 0
-total = 0
+  #print a question
+  print("How many numbers should I sum up?")
+  amount = int(input())
 
-while (number < amount ):
-  number += 1
-  print("Please enter number {} of {}:" .format(number, amount))
-  sum = int(input())
-  total = sum + total
+  number = 0
+  total = 0
 
-print("The answer is {}." .format(total))
+  #repeats the message but changing a little bit every time depending on user answer
+  while (number < amount ):
+    number += 1
+    print("Please enter number {} of {}:" .format(number, amount))
+    sum = int(input())
+    total = sum + total
+
+  print("The answer is {}." .format(total))
 

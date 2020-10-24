@@ -1,10 +1,16 @@
-print("What phrase do you see?")
-phrase = input()
-print("Reversing...")
+#define a function
+def run():
 
-reversed = ""
+  #print a question
+  print("What phrase do you see?")
+  phrase = input()
+  print("Reversing...")
 
-for letter in phrase:
+  #create a variable
+  reversed = ""
+
+  #reversing the phrase
+  for letter in phrase:
     reversed = letter + reversed
 
-print(reversed)
+  print(reversed)

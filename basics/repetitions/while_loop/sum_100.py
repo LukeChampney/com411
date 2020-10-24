@@ -1,10 +1,15 @@
-print("Calculating the sum of the first 100 numbers...")
+#define a function
+def run():
 
-number = 1
-total = 0
+  #print a question
+  print("Calculating the sum of the first 100 numbers...")
 
-while (number <= 100):
-  total = total + number
-  number += 1
+  number = 1
+  total = 0
 
-print("...Done! The answer is {}" .format(total))
+  #repeats the calculation all the way to 100
+  while (number <= 100):
+    total = total + number
+    number += 1
+
+  print("...Done! The answer is {}" .format(total))

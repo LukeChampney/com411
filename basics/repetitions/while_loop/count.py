@@ -1,12 +1,17 @@
-print("How many live cables should I avoid?")
-livecables = int(input())
+#define a function
+def run(): 
 
-livecablesavoided = 0
+  #print a question
+  print("How many live cables should I avoid?")
+  livecables = int(input())
 
-while (livecablesavoided < livecables):
-  print("Avoiding...", end="")
-  livecablesavoided += 1
-  print("Done! {} live cables avoided." .format(livecablesavoided))
+  livecablesavoided = 0
 
-print()
-print("All live cables have been avoided.")
+  #repeat the message but the bars is added each time until livecablesavoided match with livecables
+  while (livecablesavoided < livecables):
+    print("Avoiding...", end="")
+    livecablesavoided += 1
+    print("Done! {} live cables avoided." .format(livecablesavoided))
+
+  print()
+  print("All live cables have been avoided.")
