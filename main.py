@@ -50,6 +50,7 @@ import basics.repetitions.while_loop.sum_100 as sum_100
 import basics.repetitions.while_loop.sum_user_numbers as sum_user_numbers
 
 import data.lists.simple_list as simple_list
+import data.lists.index_list as index_list
 
 
 def run_blocks():
@@ -641,7 +642,8 @@ def run_block_b_lists():
     print("Which program in 'Lists' do you wish to run?")
     print()
     print("1) simple_list")
-    print("2) Go back")
+    print("2) index_list")
+    print("3) Go back")
     response = input()
     print()
 
@@ -651,6 +653,12 @@ def run_block_b_lists():
         run_block_b_lists()
 
     elif (response == "2"):
+        index_list.run()
+        print("")
+        run_block_b_lists()
+
+
+    elif (response == "3"):
         run_block_b()
 
     else:
