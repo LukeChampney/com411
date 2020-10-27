@@ -12,6 +12,4 @@ def run():
     #prints whatever in the list
     print(directions())
 
-  run() 
-
-
+  run()
