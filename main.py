@@ -51,8 +51,8 @@ import basics.repetitions.while_loop.sum_user_numbers as sum_user_numbers
 
 import data.lists.simple_list as simple_list
 import data.lists.index_list as index_list
-
 import data.lists.iterate_list as iterate_list
+import data.lists.populate_list as populate_list
 
 
 def run_blocks():
@@ -646,7 +646,8 @@ def run_block_b_lists():
     print("1) simple_list")
     print("2) index_list")
     print("3) iterate_list")
-    print("4) Go back")
+    print("4) populate_list")
+    print("5) Go back")
 
     response = input()
     print()
@@ -668,6 +669,11 @@ def run_block_b_lists():
         run_block_b_lists()
 
     elif (response == "4"):
+        populate_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "5"):
         run_block_b()
 
     else:
