@@ -53,9 +53,12 @@ import data.lists.simple_list as simple_list
 import data.lists.index_list as index_list
 import data.lists.iterate_list as iterate_list
 import data.lists.populate_list as populate_list
+
 import data.tuples.simple_tuple as simple_tuple
 import data.tuples.function_tuple as function_tuple
 import data.tuples.nested_tuple as nested_tuple
+
+import data.sets.simple_set as simple_set
 
 
 def run_blocks():
@@ -628,7 +631,8 @@ def run_block_b():
     print()
     print("1) Lists")
     print("2) Tuples")
-    print("3) Go back")
+    print("3) Sets")
+    print("4) Go back")
     response = input()
     print()
 
@@ -639,6 +643,9 @@ def run_block_b():
         run_block_b_tuples()
 
     elif (response == "3"):
+        run_block_b_sets()
+
+    elif (response == "4"):
         run_blocks()
 
     else:
@@ -696,6 +703,7 @@ def run_block_b_tuples():
     print("3) nested_tuple")
     print("4) Go back")
 
+
     response = input()
     print()
 
@@ -715,6 +723,28 @@ def run_block_b_tuples():
         run_block_b_tuples()
 
     elif (response == "4"):
+        run_block_b()
+
+    else:
+        print("Error! Please try again")
+        run_block_b_tuples()
+
+def run_block_b_sets():
+    print("")
+    print("Which program in 'Sets' do you wish to run?")
+    print()
+    print("1) simple_set")
+    print("2) Go back")
+
+    response = input()
+    print()
+
+    if (response == "1"):
+        simple_set.run()
+        print("")
+        run_block_b_sets()
+
+    elif (response == "2"):
         run_block_b()
 
     else:
