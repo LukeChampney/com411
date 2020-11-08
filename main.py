@@ -51,8 +51,9 @@ import basics.repetitions.while_loop.sum_user_numbers as sum_user_numbers
 
 import data.lists.simple_list as simple_list
 import data.lists.index_list as index_list
-
 import data.lists.iterate_list as iterate_list
+import data.lists.populate_list as populate_list
+import data.tuples.simple_tuple as simple_tuple
 
 
 def run_blocks():
@@ -624,7 +625,8 @@ def run_block_b():
     print("Which folder in 'Block B: Data' do you wish to open?")
     print()
     print("1) Lists")
-    print("2) Go back")
+    print("2) Tuples")
+    print("3) Go back")
     response = input()
     print()
 
@@ -632,6 +634,9 @@ def run_block_b():
         run_block_b_lists()
 
     elif (response == "2"):
+        run_block_b_tuples()
+
+    elif (response == "3"):
         run_blocks()
 
     else:
@@ -646,7 +651,8 @@ def run_block_b_lists():
     print("1) simple_list")
     print("2) index_list")
     print("3) iterate_list")
-    print("4) Go back")
+    print("4) populate_list")
+    print("5) Go back")
 
     response = input()
     print()
@@ -661,18 +667,45 @@ def run_block_b_lists():
         print("")
         run_block_b_lists()
 
-
     elif (response == "3"):
         iterate_list.run()
         print("")
         run_block_b_lists()
 
     elif (response == "4"):
+        populate_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "5"):
         run_block_b()
 
     else:
         print("Error! Please try again")
         run_block_b_lists()
+
+
+def run_block_b_tuples():
+    print("")
+    print("Which program in 'Tuples' do you wish to run?")
+    print()
+    print("1) simple_tuple")
+    print("2) Go back")
+
+    response = input()
+    print()
+
+    if (response == "1"):
+        simple_tuple.run()
+        print("")
+        run_block_b_tuples()
+
+    elif (response == "2"):
+        run_block_b()
+
+    else:
+        print("Error! Please try again")
+        run_block_b_tuples()
 
 
 def run_block_c():
