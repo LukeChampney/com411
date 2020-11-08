@@ -67,6 +67,7 @@ import data.dicts.simple_dict as simple_dict
 import data.dicts.nested_dicts as nested_dicts
 
 import data.files.cwd as cwd
+import data.files.read as read
 
 
 
@@ -815,7 +816,7 @@ def run_block_b_files():
     print("Which program in 'Files' do you wish to run?")
     print()
     print("1) cwd")
-    print("2) index_list")
+    print("2) read")
     print("3) iterate_list")
     print("4) populate_list")
     print("5) Go back")
@@ -829,9 +830,9 @@ def run_block_b_files():
         run_block_b_files()
 
     elif (response == "2"):
-        index_list.run()
+        read.run()
         print("")
-        run_block_b_lists()
+        run_block_b_files()
 
     elif (response == "3"):
         iterate_list.run()
