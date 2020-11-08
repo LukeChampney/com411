@@ -59,6 +59,7 @@ import data.tuples.function_tuple as function_tuple
 import data.tuples.nested_tuple as nested_tuple
 
 import data.sets.simple_set as simple_set
+import data.sets.set_from_list as set_from_list
 
 
 
@@ -735,7 +736,8 @@ def run_block_b_sets():
     print("Which program in 'Sets' do you wish to run?")
     print()
     print("1) simple_set")
-    print("2) Go back")
+    print("2) set_from_list")
+    print("3) Go back")
 
     response = input()
     print()
@@ -746,6 +748,11 @@ def run_block_b_sets():
         run_block_b_sets()
 
     elif (response == "2"):
+        set_from_list.run()
+        print("")
+        run_block_b_sets()
+
+    elif (response == "3"):
         run_block_b()
 
     else:
