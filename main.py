@@ -60,6 +60,10 @@ import data.tuples.nested_tuple as nested_tuple
 
 import data.sets.simple_set as simple_set
 import data.sets.set_from_list as set_from_list
+import data.sets.sorted_list as sorted_list
+
+import data.dicts.simple_dict as simple_dict
+
 
 
 
@@ -634,7 +638,8 @@ def run_block_b():
     print("1) Lists")
     print("2) Tuples")
     print("3) Sets")
-    print("4) Go back")
+    print("4) Dicts")
+    print("5) Go back")
     response = input()
     print()
 
@@ -648,6 +653,9 @@ def run_block_b():
         run_block_b_sets()
 
     elif (response == "4"):
+        run_block_b_dicts()
+
+    elif (response == "5"):
         run_blocks()
 
     else:
@@ -737,7 +745,8 @@ def run_block_b_sets():
     print()
     print("1) simple_set")
     print("2) set_from_list")
-    print("3) Go back")
+    print("3) sorted_list")
+    print("4) Go back")
 
     response = input()
     print()
@@ -753,11 +762,56 @@ def run_block_b_sets():
         run_block_b_sets()
 
     elif (response == "3"):
+        sorted_list.run()
+        print("")
+        run_block_b_sets()
+
+    elif (response == "4"):
         run_block_b()
 
     else:
         print("Error! Please try again")
-        run_block_b_tuples()
+        run_block_b_sets()
+
+def run_block_b_dicts():
+    print("")
+    print("Which program in 'Dicts' do you wish to run?")
+    print()
+    print("1) simple_dict")
+    print("2) index_list")
+    print("3) iterate_list")
+    print("4) populate_list")
+    print("5) Go back")
+
+    response = input()
+    print()
+
+    if (response == "1"):
+        simple_dict.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "2"):
+        index_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "3"):
+        iterate_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "4"):
+        populate_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "5"):
+        run_block_b()
+
+    else:
+        print("Error! Please try again")
+        run_block_b_dicts()
 
 
 def run_block_c():
