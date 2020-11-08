@@ -69,7 +69,7 @@ import data.dicts.nested_dicts as nested_dicts
 import data.files.cwd as cwd
 import data.files.read as read
 import data.files.write as write
-
+import data.files.generate as generate
 
 
 
@@ -819,7 +819,7 @@ def run_block_b_files():
     print("1) cwd")
     print("2) read")
     print("3) write")
-    print("4) populate_list")
+    print("4) generate")
     print("5) Go back")
 
     response = input()
@@ -841,7 +841,7 @@ def run_block_b_files():
         run_block_b_files()
 
     elif (response == "4"):
-        populate_list.run()
+        generate.run()
         print("")
         run_block_b_files()
 
