@@ -27,13 +27,13 @@ def run():
     observations = observed()
     remove_observations(observations)
 
-    # populate set
+
     observations_set = set()
     for observation in observations:
       data = (observation, observations.count(observation))
       observations_set.add(data)
 
-    # display set
+
     for data in sorted(observations_set):
       print("{} is observed {} times" .format(data[0], data[1]))
 
