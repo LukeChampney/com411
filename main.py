@@ -66,6 +66,8 @@ import data.sets.sorted_list as sorted_list
 import data.dicts.simple_dict as simple_dict
 import data.dicts.nested_dicts as nested_dicts
 
+import data.files.cwd as cwd
+
 
 
 
@@ -642,7 +644,8 @@ def run_block_b():
     print("2) Tuples")
     print("3) Sets")
     print("4) Dicts")
-    print("5) Go back")
+    print("5) Files")
+    print("6) Go back")
     response = input()
     print()
 
@@ -659,6 +662,9 @@ def run_block_b():
         run_block_b_dicts()
 
     elif (response == "5"):
+        run_block_b_files()
+
+    elif (response == "6"):
         run_blocks()
 
     else:
@@ -803,6 +809,46 @@ def run_block_b_dicts():
     else:
         print("Error! Please try again")
         run_block_b_dicts()
+
+def run_block_b_files():
+    print("")
+    print("Which program in 'Files' do you wish to run?")
+    print()
+    print("1) cwd")
+    print("2) index_list")
+    print("3) iterate_list")
+    print("4) populate_list")
+    print("5) Go back")
+
+    response = input()
+    print()
+
+    if (response == "1"):
+        cwd.run()
+        print("")
+        run_block_b_files()
+
+    elif (response == "2"):
+        index_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "3"):
+        iterate_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "4"):
+        populate_list.run()
+        print("")
+        run_block_b_lists()
+
+    elif (response == "5"):
+        run_block_b()
+
+    else:
+        print("Error! Please try again")
+        run_block_b_files()
 
 
 def run_block_c():
