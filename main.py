@@ -696,6 +696,7 @@ def run_block_b_tuples():
     print("3) nested_tuple")
     print("4) Go back")
 
+
     response = input()
     print()
 
