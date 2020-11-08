@@ -60,6 +60,8 @@ import data.tuples.nested_tuple as nested_tuple
 
 import data.sets.simple_set as simple_set
 import data.sets.set_from_list as set_from_list
+import data.sets.sorted_list as sorted_list
+
 
 
 
@@ -737,7 +739,8 @@ def run_block_b_sets():
     print()
     print("1) simple_set")
     print("2) set_from_list")
-    print("3) Go back")
+    print("3) sorted_list")
+    print("4) Go back")
 
     response = input()
     print()
@@ -753,6 +756,11 @@ def run_block_b_sets():
         run_block_b_sets()
 
     elif (response == "3"):
+        sorted_list.run()
+        print("")
+        run_block_b_sets()
+
+    elif (response == "4"):
         run_block_b()
 
     else:
