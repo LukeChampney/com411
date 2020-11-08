@@ -64,6 +64,7 @@ import data.sets.sorted_list as sorted_list
 
 
 import data.dicts.simple_dict as simple_dict
+import data.dicts.nested_dicts as nested_dicts
 
 
 
@@ -780,10 +781,8 @@ def run_block_b_dicts():
     print("Which program in 'Dicts' do you wish to run?")
     print()
     print("1) simple_dict")
-    print("2) index_list")
-    print("3) iterate_list")
-    print("4) populate_list")
-    print("5) Go back")
+    print("2) nested_dicts")
+    print("3) Go back")
 
     response = input()
     print()
@@ -791,24 +790,14 @@ def run_block_b_dicts():
     if (response == "1"):
         simple_dict.run()
         print("")
-        run_block_b_lists()
+        run_block_b_dicts()
 
     elif (response == "2"):
-        index_list.run()
+        nested_dicts.run()
         print("")
-        run_block_b_lists()
+        run_block_b_dicts()
 
     elif (response == "3"):
-        iterate_list.run()
-        print("")
-        run_block_b_lists()
-
-    elif (response == "4"):
-        populate_list.run()
-        print("")
-        run_block_b_lists()
-
-    elif (response == "5"):
         run_block_b()
 
     else:
