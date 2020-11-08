@@ -54,6 +54,8 @@ import data.lists.index_list as index_list
 import data.lists.iterate_list as iterate_list
 import data.lists.populate_list as populate_list
 import data.tuples.simple_tuple as simple_tuple
+import data.tuples.function_tuple as function_tuple
+import data.tuples.nested_tuple as nested_tuple
 
 
 def run_blocks():
@@ -690,7 +692,9 @@ def run_block_b_tuples():
     print("Which program in 'Tuples' do you wish to run?")
     print()
     print("1) simple_tuple")
-    print("2) Go back")
+    print("2) function_tuple")
+    print("3) nested_tuple")
+    print("4) Go back")
 
     response = input()
     print()
@@ -701,6 +705,16 @@ def run_block_b_tuples():
         run_block_b_tuples()
 
     elif (response == "2"):
+        function_tuple.run()
+        print("")
+        run_block_b_tuples()
+
+    elif (response == "3"):
+        nested_tuple.run()
+        print("")
+        run_block_b_tuples()
+
+    elif (response == "4"):
         run_block_b()
 
     else:

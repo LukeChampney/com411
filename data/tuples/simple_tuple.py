@@ -5,6 +5,6 @@ def run():
     return min(likelihoods)
 
   def run():
-    print("Minimum likelihood of falling: {}" .format(likelihood()))
+    print("Minimum likelihood of falling: {}%" .format(likelihood()))
 
   run()
