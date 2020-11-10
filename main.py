@@ -72,6 +72,7 @@ import data.files.write as write
 import data.files.generate as generate
 
 import visual.plots.simple_plot as simple_plot
+import visual.plots.squares as squares
 
 
 
@@ -879,7 +880,7 @@ def run_block_c_plots():
     print("Which program in 'Plots' do you wish to run?")
     print()
     print("1) simple_plot")
-    print("2) read")
+    print("2) squares")
     print("3) write")
     print("4) Go back")
 
@@ -892,7 +893,7 @@ def run_block_c_plots():
         run_block_c_plots()
 
     elif (response == "2"):
-        read.run()
+        squares.run()
         print("")
         run_block_c_plots()
 
@@ -902,7 +903,7 @@ def run_block_c_plots():
         run_block_c_plots()
 
     elif (response == "4"):
-        run_block_b()
+        run_block_c()
 
     else:
         print("Error! Please try again")
