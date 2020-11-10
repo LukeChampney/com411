@@ -71,6 +71,7 @@ import data.files.read as read
 import data.files.write as write
 import data.files.generate as generate
 
+import visual.plots.simple_plot as simple_plot
 
 
 
@@ -854,7 +855,60 @@ def run_block_b_files():
 
 
 def run_block_c():
-    print("Folder system is not made yet")
+    print()
+    print("Which folder in 'Block C: Visual' do you wish to open?")
+    print()
+    print("1) Plots")
+    print("2) Go back")
+    response = input()
+    print()
+
+    if (response == "1"):
+        run_block_c_plots()
+
+    elif (response == "2"):
+        run_blocks()
+
+    else:
+        print("Error! Please try again")
+        run_block_c()
+
+
+def run_block_c_plots():
+    print("")
+    print("Which program in 'Plots' do you wish to run?")
+    print()
+    print("1) simple_plot")
+    print("2) read")
+    print("3) write")
+    print("4) Go back")
+
+    response = input()
+    print()
+
+    if (response == "1"):
+        simple_plot.run()
+        print("")
+        run_block_c_plots()
+
+    elif (response == "2"):
+        read.run()
+        print("")
+        run_block_c_plots()
+
+    elif (response == "3"):
+        write.run()
+        print("")
+        run_block_c_plots()
+
+    elif (response == "4"):
+        run_block_b()
+
+    else:
+        print("Error! Please try again")
+        run_block_c_plots()
+
+
 
 
 def run_block_d():
