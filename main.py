@@ -74,6 +74,7 @@ import data.files.generate as generate
 import visual.plots.simple_plot as simple_plot
 import visual.plots.squares as squares
 import visual.plots.path as path
+import visual.plots.dict_ as dict_
 
 
 
@@ -883,7 +884,8 @@ def run_block_c_plots():
     print("1) simple_plot")
     print("2) squares")
     print("3) path")
-    print("4) Go back")
+    print("4) dict_")
+    print("5) Go back")
 
     response = input()
     print()
@@ -904,6 +906,11 @@ def run_block_c_plots():
         run_block_c_plots()
 
     elif (response == "4"):
+        dict_.run()
+        print("")
+        run_block_c_plots()
+
+    elif (response == "5"):
         run_block_c()
 
     else:
