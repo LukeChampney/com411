@@ -73,6 +73,7 @@ import data.files.generate as generate
 
 import visual.plots.simple_plot as simple_plot
 import visual.plots.squares as squares
+import visual.plots.path as path
 
 
 
@@ -881,7 +882,7 @@ def run_block_c_plots():
     print()
     print("1) simple_plot")
     print("2) squares")
-    print("3) write")
+    print("3) path")
     print("4) Go back")
 
     response = input()
@@ -898,7 +899,7 @@ def run_block_c_plots():
         run_block_c_plots()
 
     elif (response == "3"):
-        write.run()
+        path.run()
         print("")
         run_block_c_plots()
 
